@@ -10,12 +10,12 @@ class VigenereCipher:
             if char.isalpha():
                 key_shift = ord(key[key_index % len(key)].upper()) - ord('A')
                 if char.isupper():
-                    encrypted_char = chr((ord(char) - ord('A') + key_shift) % 26 + ord('A'))
+                    encrypt_text += chr((ord(char) - ord('A') + key_shift) % 26 + ord('A'))
                 else:
-                    encrypted_char = chr((ord(char) - ord('a') + key_shift) % 26 + ord('a'))
+                    encrypt_text += chr((ord(char) - ord('a') + key_shift) % 26 + ord('a'))
                 key_index += 1
             else:
-                encrypted_char += char
+                encrypt_text += char
         
         return encrypt_text
     
@@ -27,11 +27,11 @@ class VigenereCipher:
             if char.isalpha():
                 key_shift = ord(key[key_index % len(key)].upper()) - ord('A')
                 if char.isupper():
-                    decrypted_char = chr((ord(char) - ord('A') - key_shift) % 26 + ord('A'))
+                    decrypt_text += chr((ord(char) - ord('A') - key_shift) % 26 + ord('A'))
                 else:
-                    decrypted_char = chr((ord(char) - ord('a') - key_shift) % 26 + ord('a'))
+                    decrypt_text += chr((ord(char) - ord('a') - key_shift) % 26 + ord('a'))
                 key_index += 1
             else:
-                decrypted_char += char
+                decrypt_text += char
         
         return decrypt_text
