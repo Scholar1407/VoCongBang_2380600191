@@ -10,11 +10,14 @@ class CaesarCipher:
         encrypt_text = []
         
         for letter in plain_text:
-            letter_index = self.alphabet.index(letter)
-            output_index = (letter_index + key) % alphabet_len
-            output_letter = self.alphabet[output_index]
-            encrypt_text.append(output_letter)
-        
+            if letter in self.alphabet:
+                letter_index = self.alphabet.index(letter)
+                output_index = (letter_index + key) % alphabet_len
+                output_letter = self.alphabet[output_index]
+                encrypt_text.append(output_letter)
+            else:
+                encrypt_text.append(letter)
+                
         return "".join(encrypt_text)
 
     def decrypt_text(self, cipher_text: str, key: int) -> str:
@@ -23,9 +26,12 @@ class CaesarCipher:
         decrypt_text = []
         
         for letter in cipher_text:
-            letter_index = self.alphabet.index(letter)
-            output_index = (letter_index - key) % alphabet_len
-            output_letter = self.alphabet[output_index]
-            decrypt_text.append(output_letter)
+            if letter in self.alphabet:
+                letter_index = self.alphabet.index(letter)
+                output_index = (letter_index - key) % alphabet_len
+                output_letter = self.alphabet[output_index]
+                decrypt_text.append(output_letter)
+            else:
+                decrypt_text.append(letter)
         
         return "".join(decrypt_text)
