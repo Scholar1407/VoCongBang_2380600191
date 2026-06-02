@@ -15,12 +15,12 @@ class MyApp(QMainWindow):
         url = "http://127.0.0.1:5000/api/caesar/encrypt"
         payload = {
             "plain_text": self.ui.txt_plain_text.toPlainText(),
-            "key": self.ui.txt_key.text()  # Nếu txt_key là QTextEdit
+            "key": self.ui.txt_key.text()
         }
         try:
             response = requests.post(url, json=payload)
             print("Response status code:", response.status_code)
-            print("Response text:", response.text)  # Debug dữ liệu API trả về
+            print("Response text:", response.text)  
 
             if response.status_code == 200:
                 try:
@@ -42,12 +42,12 @@ class MyApp(QMainWindow):
         url = "http://127.0.0.1:5000/api/caesar/decrypt"
         payload = {
             "cipher_text": self.ui.txt_cipher_text.toPlainText(),
-            "key": self.ui.txt_key.text()  # Nếu txt_key là QTextEdit
+            "key": self.ui.txt_key.text()  
         }
         try:
             response = requests.post(url, json=payload)
             print("Response status code:", response.status_code)
-            print("Response text:", response.text)  # Debug dữ liệu API trả về
+            print("Response text:", response.text)  
 
             if response.status_code == 200:
                 try:
