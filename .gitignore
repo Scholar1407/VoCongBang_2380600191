@@ -68,3 +68,10 @@ venv.bak/
 
 # macOS
 .DS_Store
+
+*.pyc
+__pycache__/
+*.dll
+platforms/
+*.pem
+keys/
