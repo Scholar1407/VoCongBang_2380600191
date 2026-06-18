@@ -18,7 +18,7 @@
 
 ## 📖 Giới thiệu (Introduction)
 
-## Dự án bao gồm các labs thực hành liên quan đến lập trình Python cơ bản, kiến trúc Client-Server (Socket), cùng với việc triển khai các thuật toán mã hóa và bảo mật thông tin như mã hóa đối xứng, bất đối xứng, băm và trao đổi khóa.
+Dự án bao gồm các labs thực hành liên quan đến lập trình Python cơ bản, kiến trúc Client-Server (Socket), cùng với việc triển khai các thuật toán mã hóa và bảo mật thông tin như mã hóa đối xứng, bất đối xứng, băm và trao đổi khóa.
 
 ## 📂 Cây thư mục (Directory Structure)
 
