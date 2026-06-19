@@ -8,7 +8,7 @@ import webbrowser
 import time
 
 SERVER_HOST = "localhost"
-SERVER_PORT = 12345
+SERVER_PORT = 12347
 WEB_HOST = "127.0.0.1"
 WEB_PORT_START = 5000
 
