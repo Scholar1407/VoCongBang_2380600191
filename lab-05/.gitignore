@@ -75,6 +75,6 @@ platforms/
 *.pem
 keys/
 
-*.bat
-*.key
-*.cnf
+.bat
+.key
+.cnf
